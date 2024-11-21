@@ -1,0 +1,29 @@
+{{>partials/header}}
+
+<a href="/cadastrar">Adicionar Produtos<a>
+
+<table border="1" width="100%">
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>VALOR</th>
+        <th>QUANTIDADE</th>
+        <th>AÇÕES</th>
+    </tr>
+
+    {{#products}}
+    <tr>
+        <td>{{id}} </td> <!-- exibir o id -->
+        <td>{{nome}} </td> <!-- exibir o nome -->
+        <td>{{valor}} </td> <!-- exibir o valor -->
+        <td>{{quantidade}}</td> <!-- exibir o quantidade -->
+        <td>
+        <a href="/editar/{{id}}">{Editar}</a>
+        <a href="/excluir">{Excluir}</a>
+        </td>
+    </tr>
+    {{/products}}
+
+</table>
+
+{{>partials/footer}}
