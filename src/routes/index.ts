@@ -12,5 +12,6 @@ router.get('/cadastrar', produtoController.visualizarCadastro)
 router.post('/cadastrar', produtoController.cadastroProduto)
 router.get('/editar/:id', produtoController.editaProduto)
 router.post('/editar/:id', produtoController.atualizaProduto)
+router.get('/excluir/:id', produtoController.excluirProduto)
 
 export default router

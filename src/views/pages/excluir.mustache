@@ -1,0 +1,8 @@
+{{>partials/header}}
+ <form action="/excluir" method="POST">
+        <p>Você tem certeza que deseja excluir o produto: <strong>{{nome}}</strong>?</p>
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" style="background-color: red; color: white;">Excluir Produto</button>
+        <a href="/produtos" style="text-decoration: none; padding: 5px; background-color: gray; color: white;">Cancelar</a>
+    </form>
+{{>partials/footer}}
