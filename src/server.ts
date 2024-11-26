@@ -1,6 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import mustache from 'mustache-express'
+import cors from 'cors';
+import bodyParser from 'body-parser';
 import path from 'path'
 
 //importando o index.ts
@@ -8,6 +10,9 @@ import mainRoutes from './routes/index'
 
 dotenv.config()
 const server = express()
+server.use(cors());
+server.use(bodyParser.json());
+server.use('/login', Usuario);
 server.set('view engine','mustache')
 server.set('views',path.join(__dirname,'views'))
 server.engine('mustache',mustache())
